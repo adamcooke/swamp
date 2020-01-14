@@ -45,7 +45,7 @@ module Swamp
       end
 
       Dir[File.join(path, '**', '*.rb')].each do |path|
-        CLIDSL.new(self).instance_eval(File.read(path))
+        CLIDSL.new(self).instance_eval(File.read(path), path)
       end
     end
 
